@@ -1,0 +1,64 @@
+           			LCD-STATIONS.TXT
+
+The report is a fixed-length summary listing of current Local Climatological Data (LCD) stations, including identifiers 
+and the latest known location information.
+
+The location information includes latitude, longitude, and elevation.
+
+The file is sorted by WBAN identifier.
+
+
+FIELD               LENGTH  FORMAT       POSITION   DESCRIPTION
+-----------------------------------------------------------------------------------------------------------------------------------
+WBAN_ID             5 	    99999        001-005    Assigned by NCEI, used for digital data storage and general station 
+                                                    identification purposes.
+
+TRANSMITTAL_ID      10      X(10)        007-016    Usually this is the official ICAO identifier, used for geographical locations 
+                                                    throughout the world, managed by the International Civil Aviation Organization. 
+                                                    Sometimes the station will transmit data to NCEI using a custom ID that we 
+                                                    label as a type of TRANSMITTAL (see below).
+
+TRANSMITTAL_ID_TYPE 20      X(20)        018-037    At this time, will either be ICAO or TRANSMITTAL.  Most of the IDs used to 
+                                                    transmit LCD data are official ICAO identifiers, but in certain cases where they 
+                                                    are not, they are labeled as TRANSMITTAL.
+
+CALL_SIGN           10      X(10)        039-048    Usually this is the official FAA identifier for LCD stations, but in cases of 
+                                                    Pacific stations, this is the ICAO identifier.
+
+FAA_ID              3       XXX          050-052    Alpha-numeric, managed by USDT Federal Aviation Administration used for site 
+                                                    identification of sites vital to navigation.
+
+WMO_ID              5       99999 	 054-058    Assigned by World Meteorological Organization, used for international weather 
+                                                    data exchange and station documentation.
+
+NWSLI_ID            8       X(8)         060-067    Alpha-numeric, location identifier assigned by the National Weather Service 
+                                                    for use in real-time data transmissions and forecasts.												
+
+COOP_ID             6       999999       069-074    Assigned by NCEI, first 2 digits represent state,last 4 digits are assigned 
+                                                    numerically by alphabetical ordering of the station name.
+
+GHCND_ID            11      X(11)        076-086    Populated if station is included in GHCN-Daily product.
+
+CITY                50      X(50)        088-137    City listed on the LCD publication.
+
+LOCATION            60      X(60)        139-198    Station location listed on the LCD publication.
+
+LOCATION_AREA       25      X(25)        200-224    Location area used for searching for the station in NCEI's Image and 
+                                                    Publication (IPS) system.
+															
+STATE_PROV 	    2 	    X(2)         226-227    USPS two character alphabetic abbreviation for each state, uppercase.
+
+FIPS_COUNTRY_CODE   2       X(2) 	 229-230    FIPS country code.
+
+NWS_REGION          10 	    X(10)        232-241    NWS region (ALASKAN, CENTRAL, EASTERN, PACIFIC, SOUTHERN, WESTERN).
+
+LAT_DEC 	    9       X(9)         243-251    Decimal latitude, blank indicates North and "-" indicates South.
+
+LON_DEC 	    10      X(10)        253-262    Decimal longitude, blank indicates East and "-" indicates West.
+
+ELEV_GROUND 	    6 	    X(6)         264-269    Ground elevation.
+
+ELEV_GROUND_UNIT    6       X(6)         271-276    Ground elevation unit, always FEET.
+
+UTC_OFFSET          3       x99          278-280    Time zone, positive or negative offset from UTC, where "x" is "+" or "-".
+-----------------------------------------------------------------------------------------------------------------------------------
