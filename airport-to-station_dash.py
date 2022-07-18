@@ -18,9 +18,9 @@ import matplotlib.pyplot as plt
 from folium import plugins
 
 app = dash.Dash()
-distances = pd.read_pickle('/content/drive/MyDrive/career/United Ground/uge_deicing_heatwatch_2022/data_noaa/distances.pkl')
-df_stations = pd.read_pickle('/content/drive/MyDrive/career/United Ground/uge_deicing_heatwatch_2022/data_noaa/df_stations.pkl')
-airports = pd.read_pickle('/content/drive/MyDrive/career/United Ground/uge_deicing_heatwatch_2022/data_noaa/airports.pkl')
+distances = pd.read_pickle('uge_deicing_heatwatch_2022/data_noaa/distances.pkl')
+df_stations = pd.read_pickle('uge_deicing_heatwatch_2022/data_noaa/df_stations.pkl')
+airports = pd.read_pickle('uge_deicing_heatwatch_2022/data_noaa/airports.pkl')
 
 app.layout = html.Div(id = 'parent', children = [
     html.H1(id = 'H1', children = 'Styling using html components', style = {'textAlign':'center',\
