@@ -3,8 +3,13 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
+# Dash init
 app = dash.Dash(__name__)
 
+# Flask init
+server = app.server
+
+# App layout
 app.layout = html.Div(
     [
         html.Iframe(
@@ -23,6 +28,7 @@ app.layout = html.Div(
 )
 
 
+# Callback decorator for updating func
 @app.callback(
     Output('my-output', 'src'),
     Input('textinput', 'value'),
@@ -31,7 +37,6 @@ app.layout = html.Div(
 def update_output_div(input_value):
     return f'assets/{input_value}.html'
 
-
-
+# Check
 if __name__ == '__main__':
     app.run_server()
