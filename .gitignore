@@ -3,3 +3,4 @@
 .RData
 .Ruserdata
 uge_deicing_heatwatch_2022.Rproj
+*.bak
