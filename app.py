@@ -32,5 +32,6 @@ def update_output_div(input_value):
     return f'assets/{input_value}.html'
 
 
+
 if __name__ == '__main__':
     app.run_server()

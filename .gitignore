@@ -4,3 +4,6 @@
 .Ruserdata
 uge_deicing_heatwatch_2022.Rproj
 *.bak
+*.pyc
+.DS_Store
+.env
